@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Anek Malayalam', sans-serif;
+    color: white;
+    background-image: url(img/kiva9.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding-bottom: 10em;
+    min-height: 100vh;
+}
+
+/*Menú hamburguesa*/
+nav{
+    background: rgba(00, 00, 00, 0.8);
+    height: 140px;
+    width: 100%;
+}
+
+p{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul{
+    text-align: center;    
+}
+
+nav ul li{
+    margin: 0 5px;   
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+    background: blue;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 0%;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*Contenido*/
+.parrafo{
+    background-color: rgba(0, 0, 0, 0.8); 
+    max-width: max-content;
+    margin: 100px auto 0px auto;
+    padding: 40px 20px 40px 20px;
+    text-align: start;
+    border: 2px solid white;
+}
+
+h1{
+    background-color: rgba(00, 00, 00, 0.8);
+    width: max-content;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    margin: 0;
+    padding: 15px 30px;
+    color: white;
+    font-size: 55px;
+}
+
+/*Pie de página*/
+.pie_pagina{  
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;       
+}
+    
+.redes{
+    display: flex;
+    justify-content: center;
+        
+    justify-content: space-around;
+    width: 200px;
+    margin: auto 0px auto 20px; 
+}
+    
+.div_derechosautor{      
+    height: max-content;
+    margin: auto 10px auto 0px;         
+}
+    
+@media (max-width: 768px){
+    /*menu hamburguesa*/
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(45, 77, 127);
+        top: 140px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    /*Pie de página*/
+    .pie_pagina{
+        display: block;
+        margin: auto;
+    }
+    .redes{
+        margin: 10px auto 0px auto;
+
+    }
+
+    a{
+        display: block;
+        text-align: center;
+    }
+}
